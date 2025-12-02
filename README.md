@@ -102,7 +102,10 @@ sudo nano /etc/exports
   - *Add the following line to share the directory with all machines in the subnet        192.168.82.0/24: (My LAN Network)*
 
 ```yml
-/mnt/suraj_server 192.168.82.0/24(rw,sync,no_subtree_check)
+/mnt/suraj_server 192.168.82.0/24(rw,sync,no_subtree_check)  OR
+
+/mnt/suraj_server 192.168.82.0/24(rw,no_subtree_check,insecure,no_root_squash)
+
 ```
   - *rw: Enables read and write access for clients.*
   - *sync: Ensures data is written to disk before the server replies to the client.*
